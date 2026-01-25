@@ -25,6 +25,6 @@ CREATE TABLE pengguna (
     id_user INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50),
     password VARCHAR(100),
-    level ENUM('admin','kasir','owner')
+    role ENUM('admin','kasir','owner')
 );
 
