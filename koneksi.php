@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "db_laundry");
+$koneksi = mysqli_connect("localhost", "root", "", "laundry");
 
 // Cek koneksi
 if (mysqli_connect_errno()) {
@@ -7,3 +7,4 @@ if (mysqli_connect_errno()) {
     exit();
 }
 ?>
+
