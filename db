@@ -19,8 +19,10 @@ CREATE TABLE outlet (
 CREATE TABLE paket (
     id_paket INT AUTO_INCREMENT PRIMARY KEY,
     nama_paket VARCHAR(100),
+    jenis ENUM('Hemat', 'Reguler') NOT NULL,
     harga INT
 );
+
 CREATE TABLE pengguna (
     id_user INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50),
