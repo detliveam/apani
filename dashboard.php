@@ -74,7 +74,7 @@ if (isset($_GET['edit'])) {
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <style>
+   
 
    <style>
     {
@@ -110,6 +110,9 @@ body {
 
 .navbar a:hover {
     background: #333;
+}
+.navbar h2 {
+    color: #fff;
 }
 
 
@@ -158,7 +161,7 @@ form button:hover {
     background: #333;
 }
 
-/* TABLE */
+
 table {
     background: #fff;
     margin: 0 auto;
@@ -180,7 +183,7 @@ table tr:nth-child(even) {
     background: #eee;
 }
 
-/* LINK AKSI */
+
 table a {
     color: #000;
     text-decoration: none;
@@ -196,6 +199,7 @@ table a {
 <h2>Welcome coy</h2>
 
 <div class="navbar">
+    <center><h2> Laundry </h2></center>
     <a href="dashboard.php">Dashboard</a>
     <a href="outlet.php">Outlet</a>
     <a href="paket.php">Paket</a>
