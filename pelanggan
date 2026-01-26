@@ -101,6 +101,9 @@ body {
 .navbar a:hover {
     background: #333;
 }
+.navbar h2 {
+    color: #fff;
+}
 
 .container {
     margin-left: 240px; 
@@ -176,6 +179,7 @@ table a {
 <h2>Welcome coy</h2>
 
 <div class="navbar">
+     <center><h2> Laundry </h2></center>
     <a href="dashboard.php">Dashboard</a>
     <a href="outlet.php">Outlet</a>
     <a href="paket.php">Paket</a>
