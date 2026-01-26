@@ -96,6 +96,10 @@ body {
 .navbar a:hover {
     background: #333;
 }
+.navbar h2 {
+    color: #fff;
+}
+
 
 
 .container {
@@ -169,6 +173,7 @@ table a {
 <body>
 
 <div class="navbar">
+     <center><h2> Laundry </h2></center>
     <a href="dashboard.php">Dashboard</a>
     <a href="outlet.php">Outlet</a>
     <a href="paket.php">Paket</a>
