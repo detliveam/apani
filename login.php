@@ -1,32 +1,34 @@
 <?php
 session_start();
 
+$error = "";
+
 $username_benar = "admin";
 $password_benar = "123";
 
-$error = "";
-
 if (isset($_POST['login'])) {
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    if ($username === $username_benar && $password === $password_benar) {
+    if($username === $username_benar && $password === $password_benar) {
         $_SESSION['login'] = true;
         $_SESSION['username'] = $username;
-        header("location: dashboard.php");
+        header("location:dashboard.php");
         exit;
-    } else {
-        $error = "Username atau password salah!";
+    }   else {
+        $error = "gagal cik";
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logen</title>
+     <style>
         body {
             background: #f4f4f4;
             font-family: Arial, sans-serif;
@@ -64,14 +66,14 @@ if (isset($_POST['login'])) {
             width: 100%;
             padding: 10px;
             margin-top: 20px;
-            background: #000;
+            background: #0486ff;
             color: #fff;
             border: none;
             cursor: pointer;
         }
 
         button:hover {
-            background: #333;
+            background:  #0486ff;
         }
 
         .error {
@@ -79,28 +81,33 @@ if (isset($_POST['login'])) {
             text-align: center;
             margin-bottom: 10px;
         }
+        img {
+        padding:10px;
+        margin-top: 10%;
+        width: 50%;
+        
+        
+
+        }
     </style>
 </head>
 <body>
+    <div class="login-box">
+        <h2>Form</h2>
 
-<div class="login-box">
-    <h2>Form Login</h2>
+       <?php if($error != "") { ?>
+        <div class="error" <?= $error ?>
+            <?php } ?>
 
-    <?php if ($error != "") { ?>
-        <div class="error"><?= $error ?></div>
-    <?php } ?>
+        <form method="POST">
+            <label>Username</label>
+            <input type="text" name="username" required>
 
-    <form method="post">
-        <label>Username</label>
-        <input type="text" name="username" required>
-
-        <label>Password</label>
-        <input type="password" name="password" required>
-
-        <button type="submit" name="login">Login</button>
-    </form>
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <button type="submit" name="login">Login</button>
+</Form>
 </div>
-
+        <img src="image.png">
 </body>
 </html>
-    
