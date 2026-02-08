@@ -16,9 +16,14 @@
                 <strong>Nama Peserta : </strong> Ahmad Abyan Fanani
                 <strong>NIS : </strong>1234567890
             </p>
-            <small class="text-muted">Tahun 2026</small>
+            <small class="text-muted">Tahun 2026<br></small>
+             <a href="logout.php" onclick="return confirm('Yakin logout?')">Logout</a>
+<br><br>
         </div>
+        
     </div>
+    
 </div>
+
 </body>
 </html>
